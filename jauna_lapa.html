@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modernais Video Atskaņotājs</title>
+    <link href="" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Quintessential", serif;
+            background-color: #ac3535;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+        #video-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+        }
+        #main-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #fragment-list, #video-list {
+            list-style-type: none;
+            padding: 20px;
+            margin: 0;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        #fragment-list li, #video-list li {
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            background-color: #3a3a3a;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #fragment-list li:hover, #video-list li:hover {
+            background-color: #4a4a4a;
+        }
+        #fragment-list li.active, #video-list li.active {
+            background-color: #5a5a5a;
+        }
+        .fragment-time {
+            float: right;
+            color: #aaa;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #3a3a3a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #5a5a5a;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7a7a7a;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Izvēlieties video, lai skatītos un izpētītu tā fragmentus</h2>
+    <div class="container">
+        <div id="video-container">
+            <video id="main-video" controls>
+                <source src="video1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <ul id="fragment-list"></ul>
+    </div>
+
+    <div class="container">
+        <h3>Citi Pieejamie Video</h3>
+        <ul id="video-list">
+            <li data-video-src="video1.mp4">Video 1</li>
+            <li data-video-src="video2.mp4">Video 2</li>
+            <li data-video-src="video3.mp4">Video 3</li>
+            <li data-video-src="video4.mp4">Video 4</li>
+        </ul>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('main-video');
+        const fragmentList = document.getElementById('fragment-list');
+        const videoList = document.getElementById('video-list');
+        
+        const fragments = {
+            "video1.mp4": [
+                { start: 0, end: 10, title: "Ievads" },
+                { start: 15, end: 25, title: "Galvenā tēma" },
+                { start: 30, end: 40, title: "Intervija" },
+                { start: 45, end: 55, title: "Secinājumi" },
+            ],
+            "video2.mp4": [
+                { start: 0, end: 12, title: "Video 2 Ievads" },
+                { start: 13, end: 30, title: "Galvenā tēma 2" },
+                { start: 31, end: 45, title: "Intervija 2" },
+                { start: 46, end: 60, title: "Secinājumi 2" },
+            ],
+            "video3.mp4": [
+                { start: 0, end: 8, title: "Video 3 Ievads" },
+                { start: 9, end: 20, title: "Galvenā tēma 3" },
+                { start: 21, end: 30, title: "Intervija 3" },
+                { start: 31, end: 40, title: "Secinājumi 3" },
+            ]
+        };
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const remainingSeconds = Math.floor(seconds % 60);
+            return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+        }
+
+        function loadFragments(videoSrc) {
+            fragmentList.innerHTML = '';
+            const selectedFragments = fragments[videoSrc] || [];
+            selectedFragments.forEach((fragment, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    ${fragment.title}
+                    <span class="fragment-time">${formatTime(fragment.start)} - ${formatTime(fragment.end)}</span>
+                `;
+                li.addEventListener('click', () => {
+                    video.currentTime = fragment.start;
+                    video.play();
+                    document.querySelectorAll('#fragment-list li').forEach(item => item.classList.remove('active'));
+                    li.classList.add('active');
+                });
+                fragmentList.appendChild(li);
+            });
+        }
+
+        videoList.addEventListener('click', (e) => {
+            const videoSrc = e.target.getAttribute('data-video-src');
+            if (videoSrc) {
+                video.querySelector('source').setAttribute('src', videoSrc);
+                video.load();
+                loadFragments(videoSrc);
+                document.querySelectorAll('#video-list li').forEach(item => item.classList.remove('active'));
+                e.target.classList.add('active');
+            }
+        });
+
+        video.addEventListener('timeupdate', () => {
+            const currentTime = video.currentTime;
+            const currentFragments = fragments[video.querySelector('source').getAttribute('src')] || [];
+            currentFragments.forEach((fragment, index) => {
+                const li = fragmentList.children[index];
+                if (currentTime >= fragment.start && currentTime < fragment.end) {
+                    li.classList.add('active');
+                } else {
+                    li.classList.remove('active');
+                }
+            });
+        });
+
+        // Load the initial fragments for the first video
+        loadFragments('video1.mp4');
+    });
+    </script>
+</body>
+</html>

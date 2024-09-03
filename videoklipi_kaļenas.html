@@ -1,0 +1,716 @@
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if lt IE 9]> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+<title>Quadrille.lv </title>
+<meta name="description" content="">
+<meta name="author" content="WebThemez">
+<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<!--[if lte IE 8]>
+		<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+	<![endif]-->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<link href="css/animate.css" rel="stylesheet" media="screen">
+<link href="flexslider/flexslider.css" rel="stylesheet" />
+<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="font/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container">
+    <div class="heading text-center"> 
+      <!-- Heading -->
+      <h2>Kadriļu deju mācību video. <video src=""></video></h2>
+      <p>At variations of passages of Lorem Ipsum available, but the majority have suffered alteration..</p>
+    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video Atskaņotājs</title>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Video Atskaņotājs</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #ac3535;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                margin: 0;
+            }
+            .video-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                gap: 20px; /* Atstarpes starp atskaņotājiem */
+                width: 90%;
+                max-width: 1200px;
+            }
+            .video-player {
+                flex: 1 1 calc(33.333% - 20px);
+                background-color: #ffffff;
+                border-radius: 15px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                text-align: center;
+                transition: transform 0.3s;
+            }
+            .video-player:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+            .video-player h3 {
+                font-size: 18px;
+                margin-bottom: 15px;
+                color: #333;
+            }
+            .video-player video {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+            .toggleButton {
+                display: inline-block;
+                background-color: #007bff;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+            .toggleButton:hover {
+                background-color: #0056b3;
+            }
+            .fragmentList {
+                display: none;
+                margin-top: 10px;
+                text-align: left;
+            }
+            .fragment h3 {
+                font-size: 16px;
+                margin-bottom: 5px;
+                color: #666;
+            }
+        </style>
+    
+    
+    
+    
+    <div class="video-container">
+        <!-- Video 1 -->
+        <section class="video-player">
+            <h3>Video 1 (pilnā versija)</h3>
+            <video controls>
+                <source src="video/video1.mp4" type="video/mp4">
+            </video>
+            <button class="toggleButton">Video 1 (fragmenti)</button>
+            <div class="fragmentList">
+                <div class="fragment">
+                    <h3>Fragments 1.1</h3>
+                    <video controls>
+                        <source src="video/fragment1_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="fragment">
+                    <h3>Fragments 1.2</h3>
+                    <video controls>
+                        <source src="video/fragment1_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Video 2 -->
+        <section class="video-player">
+            <h3>Video 2 (pilnā versija)</h3>
+            <video controls>
+                <source src="video/video0.mp4" type="video/mp4">
+            </video>
+            <button class="toggleButton">Video 2 (fragmenti)</button>
+            <div class="fragmentList">
+                <div class="fragment">
+                    <h3>Fragments 2.1</h3>
+                    <video controls>
+                        <source src="video/fragment2_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="fragment">
+                    <h3>Fragments 2.2</h3>
+                    <video controls>
+                        <source src="video/fragment2_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Video 3 -->
+        <section class="video-player">
+            <h3>Video 3 (pilnā versija)</h3>
+            <video controls>
+                <source src="video/video3.mp4" type="video/mp4">
+            </video>
+            <button class="toggleButton">Video 3 (fragmenti)</button>
+            <div class="fragmentList">
+                <div class="fragment">
+                    <h3>Fragments 3.1</h3>
+                    <video controls>
+                        <source src="video/fragment3_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="fragment">
+                    <h3>Fragments 3.2</h3>
+                    <video controls>
+                        <source src="video/fragment3_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Video 4 -->
+        <section class="video-player">
+            <h3>Video 4 (pilnā versija)</h3>
+            <video controls>
+                <source src="video/video4.mp4" type="video/mp4">
+            </video>
+            <button class="toggleButton">Video 4 (fragmenti)</button>
+            <div class="fragmentList">
+                <div class="fragment">
+                    <h3>Fragments 4.1</h3>
+                    <video controls>
+                        <source src="video/fragment4_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="fragment">
+                    <h3>Fragments 4.2</h3>
+                    <video controls>
+                        <source src="video/fragment4_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Video 5 -->
+        <section class="video-player">
+            <h3>Video 5 (pilnā versija)</h3>
+            <video controls>
+                <source src="video/video5.mp4" type="video/mp4">
+            </video>
+            <button class="toggleButton">Video 5 (fragmenti)</button>
+            <div class="fragmentList">
+                <div class="fragment">
+                    <h3>Fragments 5.1</h3>
+                    <video controls>
+                        <source src="video/fragment5_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="fragment">
+                    <h3>Fragments 5.2</h3>
+                    <video controls>
+                        <source src="video/fragment5_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Video 6 -->
+        <section class="video-player">
+            <h3>Video 6 (pilnā versija)</h3>
+            <video controls>
+                <source src="video/video6.mp4" type="video/mp4">
+            </video>
+            <button class="toggleButton">Video 6 (fragmenti)</button>
+            <div class="fragmentList">
+                <div class="fragment">
+                    <h3>Fragments 6.1</h3>
+                    <video controls>
+                        <source src="video/fragment6_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="fragment">
+                    <h3>Fragments 6.2</h3>
+                    <video controls>
+                        <source src="video/fragment6_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Video 7 -->
+        <section class="video-player">
+            <h3>Video 7 (pilnā versija)</h3>
+            <video controls>
+                <source src="video/video7.mp4" type="video/mp4">
+            </video>
+            <button class="toggleButton">Video 7 (fragmenti)</button>
+            <div class="fragmentList">
+                <div class="fragment">
+                    <h3>Fragments 7.1</h3>
+                    <video controls>
+                        <source src="video/fragment7_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="fragment">
+                    <h3>Fragments 7.2</h3>
+                    <video controls>
+                        <source src="video/fragment7_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Video 8 -->
+        <section class="video-player">
+            <h3>Video 8 (pilnā versija)</h3>
+            <video controls>
+                <source src="video/video8.mp4" type="video/mp4">
+            </video>
+            <button class="toggleButton">Video 8 (fragmenti)</button>
+            <div class="fragmentList">
+                <div class="fragment">
+                    <h3>Fragments 8.1</h3>
+                    <video controls>
+                        <source src="video/fragment8_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="fragment">
+                    <h3>Fragments 8.2</h3>
+                    <video controls>
+                        <source src="video/fragment8_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Video 9 -->
+        <section class="video-player">
+            <h3>Video 9 (pilnā versija)</h3>
+            <video controls>
+                <source src="video/video9.mp4" type="video/mp4">
+            </video>
+            <button class="toggleButton">Video 9 (fragmenti)</button>
+            <div class="fragmentList">
+                <div class="fragment">
+                    <h3>Fragments 9.1</h3>
+                    <video controls>
+                        <source src="video/fragment9_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="fragment">
+                    <h3>Fragments 9.2</h3>
+                    <video controls>
+                        <source src="video/fragment9_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Video 10 -->
+        <section class="video-player">
+            <h3>Video 10 (pilnā versija)</h3>
+            <video controls>
+                <source src="video/video10.mp4" type="video/mp4">
+            </video>
+            <button class="toggleButton">Video 10 (fragmenti)</button>
+            <div class="fragmentList">
+                <div class="fragment">
+                    <h3>Fragments 10.1</h3>
+                    <video controls>
+                        <source src="video/fragment10_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="fragment">
+                    <h3>Fragments 10.2</h3>
+                    <video controls>
+                        <source src="video/fragment10_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Video 11 -->
+        <section class="video-player">
+            <h3>Video 11 (pilnā versija)</h3>
+            <video controls>
+                <source src="video/video11.mp4" type="video/mp4">
+            </video>
+            <button class="toggleButton">Video 11 (fragmenti)</button>
+            <div class="fragmentList">
+                <div class="fragment">
+                    <h3>Fragments 11.1</h3>
+                    <video controls>
+                        <source src="video/fragment11_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="fragment">
+                    <h3>Fragments 11.2</h3>
+                    <video controls>
+                        <source src="video/fragment11_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Video 12 -->
+        <section class="video-player">
+            <h3>Video 12 (pilnā versija)</h3>
+            <video controls>
+                <source src="video/video12.mp4" type="video/mp4">
+            </video>
+            <button class="toggleButton">Video 12 (fragmenti)</button>
+            <div class="fragmentList">
+                <div class="fragment">
+                    <h3>Fragments 12.1</h3>
+                    <video controls>
+                        <source src="video/fragment12_1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="fragment">
+                    <h3>Fragments 12.2</h3>
+                    <video controls>
+                        <source src="video/fragment12_2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.toggleButton');
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    const fragmentList = button.nextElementSibling;
+                    if (fragmentList.style.display === 'none' || fragmentList.style.display === '') {
+                        fragmentList.style.display = 'block';
+                        button.textContent = 'Slēpt fragmentus';
+                    } else {
+                        fragmentList.style.display = 'none';
+                        button.textContent = button.getAttribute('data-default-text');
+                    }
+                });
+                button.setAttribute('data-default-text', button.textContent);
+            });
+        });
+    </script>
+    
+    </body>
+    </html>
+    
+
+<div class="video-container">
+    <!-- Video 1 -->
+    <section class="video-player">
+        <h3>Video 1 (pilnā versija)</h3>
+        <video controls>
+            <source src="video/video1.mp4" type="video/mp4">
+        </video>
+        <button class="toggleButton">Video 1 (fragmenti)</button>
+        <div class="fragmentList">
+            <div class="fragment">
+                <h3>Fragments 1.1</h3>
+                <video controls>
+                    <source src="video/fragment1_1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="fragment">
+                <h3>Fragments 1.2</h3>
+                <video controls>
+                    <source src="video/fragment1_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video 2 -->
+    <section class="video-player">
+        <h3>Video 2 (pilnā versija)</h3>
+        <video controls>
+            <source src="video/video2.mp4" type="video/mp4">
+        </video>
+        <button class="toggleButton">Video 2 (fragmenti)</button>
+        <div class="fragmentList">
+            <div class="fragment">
+                <h3>Fragments 2.1</h3>
+                <video controls>
+                    <source src="video/fragment2_1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="fragment">
+                <h3>Fragments 2.2</h3>
+                <video controls>
+                    <source src="video/fragment2_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video 3 -->
+    <section class="video-player">
+        <h3>Video 3 (pilnā versija)</h3>
+        <video controls>
+            <source src="video/video3.mp4" type="video/mp4">
+        </video>
+        <button class="toggleButton">Video 3 (fragmenti)</button>
+        <div class="fragmentList">
+            <div class="fragment">
+                <h3>Fragments 3.1</h3>
+                <video controls>
+                    <source src="video/fragment3_1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="fragment">
+                <h3>Fragments 3.2</h3>
+                <video controls>
+                    <source src="video/fragment3_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video 4 -->
+    <section class="video-player">
+        <h3>Video 4 (pilnā versija)</h3>
+        <video controls>
+            <source src="video/video4.mp4" type="video/mp4">
+        </video>
+        <button class="toggleButton">Video 4 (fragmenti)</button>
+        <div class="fragmentList">
+            <div class="fragment">
+                <h3>Fragments 4.1</h3>
+                <video controls>
+                    <source src="video/fragment4_1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="fragment">
+                <h3>Fragments 4.2</h3>
+                <video controls>
+                    <source src="video/fragment4_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video 5 -->
+    <section class="video-player">
+        <h3>Video 5 (pilnā versija)</h3>
+        <video controls>
+            <source src="video/video5.mp4" type="video/mp4">
+        </video>
+        <button class="toggleButton">Video 5 (fragmenti)</button>
+        <div class="fragmentList">
+            <div class="fragment">
+                <h3>Fragments 5.1</h3>
+                <video controls>
+                    <source src="video/fragment5_1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="fragment">
+                <h3>Fragments 5.2</h3>
+                <video controls>
+                    <source src="video/fragment5_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video 6 -->
+    <section class="video-player">
+        <h3>Video 6 (pilnā versija)</h3>
+        <video controls>
+            <source src="video/video6.mp4" type="video/mp4">
+        </video>
+        <button class="toggleButton">Video 6 (fragmenti)</button>
+        <div class="fragmentList">
+            <div class="fragment">
+                <h3>Fragments 6.1</h3>
+                <video controls>
+                    <source src="video/fragment6_1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="fragment">
+                <h3>Fragments 6.2</h3>
+                <video controls>
+                    <source src="video/fragment6_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video 7 -->
+    <section class="video-player">
+        <h3>Video 7 (pilnā versija)</h3>
+        <video controls>
+            <source src="video/video7.mp4" type="video/mp4">
+        </video>
+        <button class="toggleButton">Video 7 (fragmenti)</button>
+        <div class="fragmentList">
+            <div class="fragment">
+                <h3>Fragments 7.1</h3>
+                <video controls>
+                    <source src="video/fragment7_1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="fragment">
+                <h3>Fragments 7.2</h3>
+                <video controls>
+                    <source src="video/fragment7_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video 8 -->
+    <section class="video-player">
+        <h3>Video 8 (pilnā versija)</h3>
+        <video controls>
+            <source src="video/video8.mp4" type="video/mp4">
+        </video>
+        <button class="toggleButton">Video 8 (fragmenti)</button>
+        <div class="fragmentList">
+            <div class="fragment">
+                <h3>Fragments 8.1</h3>
+                <video controls>
+                    <source src="video/fragment8_1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="fragment">
+                <h3>Fragments 8.2</h3>
+                <video controls>
+                    <source src="video/fragment8_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video 9 -->
+    <section class="video-player">
+        <h3>Video 9 (pilnā versija)</h3>
+        <video controls>
+            <source src="video/video9.mp4" type="video/mp4">
+        </video>
+        <button class="toggleButton">Video 9 (fragmenti)</button>
+        <div class="fragmentList">
+            <div class="fragment">
+                <h3>Fragments 9.1</h3>
+                <video controls>
+                    <source src="video/fragment9_1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="fragment">
+                <h3>Fragments 9.2</h3>
+                <video controls>
+                    <source src="video/fragment9_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video 10 -->
+    <section class="video-player">
+        <h3>Video 10 (pilnā versija)</h3>
+        <video controls>
+            <source src="video/video10.mp4" type="video/mp4">
+        </video>
+        <button class="toggleButton">Video 10 (fragmenti)</button>
+        <div class="fragmentList">
+            <div class="fragment">
+                <h3>Fragments 10.1</h3>
+                <video controls>
+                    <source src="video/fragment10_1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="fragment">
+                <h3>Fragments 10.2</h3>
+                <video controls>
+                    <source src="video/fragment10_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video 11 -->
+    <section class="video-player">
+        <h3>Video 11 (pilnā versija)</h3>
+        <video controls>
+            <source src="video/video11.mp4" type="video/mp4">
+        </video>
+        <button class="toggleButton">Video 11 (fragmenti)</button>
+        <div class="fragmentList">
+            <div class="fragment">
+                <h3>Fragments 11.1</h3>
+                <video controls>
+                    <source src="video/fragment11_1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="fragment">
+                <h3>Fragments 11.2</h3>
+                <video controls>
+                    <source src="video/fragment11_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video 12 -->
+    <section class="video-player">
+        <h3>Video 12 (pilnā versija)</h3>
+        <video controls>
+            <source src="video/video12.mp4" type="video/mp4">
+        </video>
+        <button class="toggleButton">Video 12 (fragmenti)</button>
+        <div class="fragmentList">
+            <div class="fragment">
+                <h3>Fragments 12.1</h3>
+                <video controls>
+                    <source src="video/fragment12_1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="fragment">
+                <h3>Fragments 12.2</h3>
+                <video controls>
+                    <source src="video/fragment12_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.toggleButton');
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                const fragmentList = button.nextElementSibling;
+                if (fragmentList.style.display === 'block' || fragmentList.style.display === '') {
+                    fragmentList.style.display = 'block';
+                    button.textContent = 'Slēpt fragmentus';
+                } else {
+                    fragmentList.style.display = 'none';
+                    button.textContent = button.getAttribute('data-default-text');
+                }
+            });
+            button.setAttribute('data-default-text', button.textContent);
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,422 @@
+<!doctype html>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--[if lt IE 9]> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+<title>Quadrille.lv </title>
+<meta name="description" content="">
+<meta name="author" content="WebThemez">
+<!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<!--[if lte IE 8]>
+		<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+	<![endif]-->
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<link href="css/animate.css" rel="stylesheet" media="screen">
+<link href="flexslider/flexslider.css" rel="stylesheet" />
+<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="font/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<!DOCTYPE html>
+<html lang="lv">
+
+  <div class="container">
+    <div class="heading text-center"> 
+      <!-- Heading -->
+      <h2>Kadriļu Mūzika</h2>
+      <p>At variations of passages of Lorem Ipsum available, but the majority have suffered alteration..</p>
+    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mūzikas Atskaņotājs</title>
+    
+
+    
+    <style>
+        .grey-qo-regular {
+  font-family: "Grey Qo", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+        body {
+            font-family: "Quintessential", serif;
+            background-color: #ac3535;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .music-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px; /* Atstarpes starp atskaņotājiem */
+            width: 90%;
+            max-width: 1000px;
+        }
+        .music-player {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .music-player:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .music-player h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .music-player audio {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .toggleButton {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .toggleButton:hover {
+            background-color: #0056b3;
+        }
+        .songList {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+        }
+        .song h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="music-container">
+        <!-- Dziesma 1 -->
+        <section class="music-player">
+            <h3>Balabaska (pilnā versija)</h3>
+            <audio controls>
+                <source src="music/Balabaska.mp3" type="audio/mpeg">
+            </audio>
+            <button class="toggleButton">Balabaska (fragmenti)</button>
+            <div class="songList">
+                <div class="song">
+                    <h3>Pirmais gājiens</h3>
+                    <audio controls>
+                        <source src="dziesma2.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3>Otrais gājiens</h3>
+                    <audio controls>
+                        <source src="dziesma2.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dziesma 2 -->
+        <section class="music-player">
+            <h3>Cita Dziesma (pilnā versija)</h3>
+            <audio controls>
+                <source src="music/CitaDziesma.mp3" type="audio/mpeg">
+            </audio>
+            <button class="toggleButton">Cita Dziesma (fragmenti)</button>
+            <div class="songList">
+                <div class="song">
+                    <h3>Pirmais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma3.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3>Otrais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma4.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dziesma 3 -->
+        <section class="music-player">
+            <h3>Trešā Dziesma (pilnā versija)</h3>
+            <audio controls>
+                <source src="music/TrešāDziesma.mp3" type="audio/mpeg">
+            </audio>
+            <button class="toggleButton">Trešā Dziesma (fragmenti)</button>
+            <div class="songList">
+                <div class="song">
+                    <h3>Pirmais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma5.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3>Otrais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma6.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dziesma 4 -->
+        <section class="music-player">
+            <h3>Ceturtā Dziesma (pilnā versija)</h3>
+            <audio controls>
+                <source src="music/CeturtāDziesma.mp3" type="audio/mpeg">
+            </audio>
+            <button class="toggleButton">Ceturtā Dziesma (fragmenti)</button>
+            <div class="songList">
+                <div class="song">
+                    <h3>Pirmais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma7.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3>Otrais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma8.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dziesma 5 -->
+        <section class="music-player">
+            <h3>Piektā Dziesma (pilnā versija)</h3>
+            <audio controls>
+                <source src="music/PiektāDziesma.mp3" type="audio/mpeg">
+            </audio>
+            <button class="toggleButton">Piektā Dziesma (fragmenti)</button>
+            <div class="songList">
+                <div class="song">
+                    <h3>Pirmais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma9.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3>Otrais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma10.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dziesma 6 -->
+        <section class="music-player">
+            <h3>Sestā Dziesma (pilnā versija)</h3>
+            <audio controls>
+                <source src="music/SestāDziesma.mp3" type="audio/mpeg">
+            </audio>
+            <button class="toggleButton">Sestā Dziesma (fragmenti)</button>
+            <div class="songList">
+                <div class="song">
+                    <h3>Pirmais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma11.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3>Otrais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma12.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dziesma 7 -->
+        <section class="music-player">
+            <h3>Septītā Dziesma (pilnā versija)</h3>
+            <audio controls>
+                <source src="music/SeptītāDziesma.mp3" type="audio/mpeg">
+            </audio>
+            <button class="toggleButton">Septītā Dziesma (fragmenti)</button>
+            <div class="songList">
+                <div class="song">
+                    <h3>Pirmais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma13.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3>Otrais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma14.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dziesma 8 -->
+        <section class="music-player">
+            <h3>Astoņā Dziesma (pilnā versija)</h3>
+            <audio controls>
+                <source src="music/AstoņāDziesma.mp3" type="audio/mpeg">
+            </audio>
+            <button class="toggleButton">Astoņā Dziesma (fragmenti)</button>
+            <div class="songList">
+                <div class="song">
+                    <h3>Pirmais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma15.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3>Otrais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma16.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dziesma 9 -->
+        <section class="music-player">
+            <h3>Devītā Dziesma (pilnā versija)</h3>
+            <audio controls>
+                <source src="music/DevītāDziesma.mp3" type="audio/mpeg">
+            </audio>
+            <button class="toggleButton">Devītā Dziesma (fragmenti)</button>
+            <div class="songList">
+                <div class="song">
+                    <h3>Pirmais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma17.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3>Otrais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma18.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dziesma 10 -->
+        <section class="music-player">
+            <h3>Desmitā Dziesma (pilnā versija)</h3>
+            <audio controls>
+                <source src="music/DesmitāDziesma.mp3" type="audio/mpeg">
+            </audio>
+            <button class="toggleButton">Desmitā Dziesma (fragmenti)</button>
+            <div class="songList">
+                <div class="song">
+                    <h3>Pirmais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma19.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3>Otrais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma20.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dziesma 11 -->
+        <section class="music-player">
+            <h3>Vienpadsmitā Dziesma (pilnā versija)</h3>
+            <audio controls>
+                <source src="music/VienpadsmitāDziesma.mp3" type="audio/mpeg">
+            </audio>
+            <button class="toggleButton">Vienpadsmitā Dziesma (fragmenti)</button>
+            <div class="songList">
+                <div class="song">
+                    <h3>Pirmais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma21.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3>Otrais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma22.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dziesma 12 -->
+        <section class="music-player">
+            <h3>Divpadsmitā Dziesma (pilnā versija)</h3>
+            <audio controls>
+                <source src="music/DivpadsmitāDziesma.mp3" type="audio/mpeg">
+            </audio>
+            <button class="toggleButton">Divpadsmitā Dziesma (fragmenti)</button>
+            <div class="songList">
+                <div class="song">
+                    <h3>Pirmais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma23.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div class="song">
+                    <h3>Otrais fragments</h3>
+                    <audio controls>
+                        <source src="dziesma24.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.toggleButton');
+            buttons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    const songList = button.nextElementSibling;
+                    if (songList.style.display === 'none' || songList.style.display === '') {
+                        songList.style.display = 'block';
+                        button.textContent = 'Slēpt fragmentus';
+                    } else {
+                        songList.style.display = 'none';
+                        button.textContent = button.getAttribute('data-default-text');
+                    }
+                });
+                button.setAttribute('data-default-text', button.textContent);
+            });
+        });
+    </script>
+
+</body>
+</html>
